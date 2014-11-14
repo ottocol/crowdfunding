@@ -1,0 +1,27 @@
+
+estrella:
+  id: 1
+  titulo: Reconstruir la estrella de la muerte
+  descripcion: Lo sabemos, se destruyó al final del episodio IV, pero un grupo de hackers de Ikea y fans del Imperio han recuperado unas cuantas piezas. Combinándolas con los planos contenidos en la memoria de R2 creemos que podemos reconstruir la Estrella de la Muerte y ayudar al Imperio a revivir glorias pasadas.
+  objetivo: 1000000
+  fecha_limite: 2015-05-20
+  destacado: true
+  usuario: adi
+
+patinete:
+  id: 2
+  titulo: Dar la vuelta al mundo en patinete
+  descripcion: Dar la vuelta al mundo en patinete
+  objetivo: 1500
+  fecha_limite: 2015-01-20
+  destacado: true
+  usuario: adi
+
+gris:
+  id: 3
+  titulo: Un proyecto gris sin mucho interés
+  descripcion: Un proyecto gris sin mucho interés
+  objetivo: 1000
+  fecha_limite: 2015-01-10
+  destacado: false
+  usuario: mads

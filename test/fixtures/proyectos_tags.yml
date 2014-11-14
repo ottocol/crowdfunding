@@ -1,0 +1,19 @@
+#En la relación M-N no parece que se puedan usar los nombres simbólicos del YAML para
+#expresar la relación entre proyecto-tag, por eso se hace aquí con los ids.
+#en teoría debería poderse hacer (pero no funciona)
+#estrella_locura:
+#   proyecto: estrella
+#   tag: locura
+
+estrella_locura:
+  proyecto_id: 1
+  tag_id: 1
+
+estrella_malvado:
+  proyecto_id: 1
+  tag_id: 2
+
+patinete_locura:
+  proyecto_id: 2
+  tag_id: 1
+
