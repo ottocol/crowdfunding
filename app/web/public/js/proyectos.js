@@ -22,11 +22,12 @@ function callback_destacados() {
 
 function mostrar_destacados(lista) {
     var div_destacados = document.getElementById("destacados")
+    var template = document.getElementById("destacados_template").innerHTML
+
     for(var i=0;i<lista.length; i++) {
-        var fecha = new Date(lista[i].fecha_limite).toLocaleDateString()
-        div_destacados.insertAdjacentHTML("beforeend",
-                "<div> <b> " + lista[i].titulo +  "</b> <em> Hasta el  " +
-                    fecha + "</em></div>")
+        lista[i].fecha_js = new Date(lista[i].fecha_limite).toLocaleDateString()
     }
+    var html_proyecto = Mustache.render(template, lista)
+    div_destacados.insertAdjacentHTML("beforeend", html_proyecto)
 }
 
