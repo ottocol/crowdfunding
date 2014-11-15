@@ -35,3 +35,28 @@ function mostrar_destacados(lista) {
     div_destacados.insertAdjacentHTML("beforeend", html_proyecto)
 }
 
+
+function pedir_detalles(id_proyecto) {
+    var xhr = new XMLHttpRequest()
+    xhr.open("GET", "/api/proyectos/" + id_proyecto, true)
+    xhr.onreadystatechange = callback_detalles
+    xhr.send()
+}
+
+
+function callback_detalles() {
+    if (this.readyState == 4) {
+        if (this.status == 200) {
+            var proyecto = JSON.parse(this.responseText)
+            mostrar_detalles(proyecto)
+        }
+    }
+}
+
+
+function mostrar_detalles(proyecto) {
+    var elem_lista = document.getElementById("proy_" + proyecto.id)
+    var detalles_template = document.getElementById("detalles_template").innerHTML
+    elem_lista.insertAdjacentHTML("beforeend", Mustache.render(detalles_template, proyecto))
+}
+

@@ -10,10 +10,16 @@
     </div>
     <script id="destacados_template" type="text/x-tmpl-mustache">
         {{#.}}
-         <div">
+         <div id="proy_{{id}}">
           <b>{{titulo}}</b> <em>{{fecha_js}}</em>
+          <a href="javascript:pedir_detalles('{{id}}')">Detalles</a>
          </div>
         {{/.}}
+    </script>
+    <script id="detalles_template" type="text/x-tmpl-mustache">
+       <div id="detalles_{{id}}">
+          <div>{{descripcion}}</div>
+       </div>
     </script>
     <script src="js/proyectos.js"></script>
     <script src="js/lib/mustache.js"></script>
