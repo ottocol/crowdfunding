@@ -7,6 +7,15 @@
     <h1>Crowdfunding</h1>
     <h2>Proyectos destacados</h2>
     <div id="destacados"></div>
+    </div>
+    <script id="destacados_template" type="text/x-tmpl-mustache">
+        {{#.}}
+         <div">
+          <b>{{titulo}}</b> <em>{{fecha_js}}</em>
+         </div>
+        {{/.}}
+    </script>
     <script src="js/proyectos.js"></script>
+    <script src="js/lib/mustache.js"></script>
 </body>
 </html>

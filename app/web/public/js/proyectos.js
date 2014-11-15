@@ -22,11 +22,16 @@ function callback_destacados() {
 
 function mostrar_destacados(lista) {
     var div_destacados = document.getElementById("destacados")
+    //obtenemos el texto de la template de Mustache
+    var template = document.getElementById("destacados_template").innerHTML
+    //a cada elemento de la lista le añadimos la fecha en un formato adecuado para mostrar
+    //ya que el original está en AAAA-MM-DD
     for(var i=0;i<lista.length; i++) {
-        var fecha = new Date(lista[i].fecha_limite).toLocaleDateString()
-        div_destacados.insertAdjacentHTML("beforeend",
-                "<div> <b> " + lista[i].titulo +  "</b> <em> Hasta el  " +
-                    fecha + "</em></div>")
+        lista[i].fecha_js = new Date(lista[i].fecha_limite).toLocaleDateString()
     }
+    //aplicamos la plantilla Mustache a la lista de datos, obteniendo el HTML
+    var html_proyecto = Mustache.render(template, lista)
+    //insertamos el HTML en su sitio
+    div_destacados.insertAdjacentHTML("beforeend", html_proyecto)
 }
 
