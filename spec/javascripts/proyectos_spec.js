@@ -16,8 +16,7 @@ describe("prueba de proyectos", function() {
             //El div debería existir
             expect(div_detalles).not.toBeUndefined()
             //El div debería contener la descripción del proyecto
-            //El "innerText" es el texto que contiene una etiqueta, ignorando los tags
-            expect(div_detalles.innerText).toBe("descripcion 1")
+            expect(div_detalles.innerHTML).toMatch("descripcion 1")
         })
 
     })
