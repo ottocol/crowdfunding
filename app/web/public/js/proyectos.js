@@ -1,5 +1,5 @@
-window.onload = pedir_destacados
 
+window.addEventListener('load', pedir_destacados)
 
 function pedir_destacados() {
     var xhr = new XMLHttpRequest()
